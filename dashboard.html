@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Staff Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="form.css">
+
+    <script src="dashboard.js" defer></script>
+</head>
+
+<body onload=>
+
+    <div class="nav">
+        <input type="checkbox" name="" id="check">
+        <div class="container">
+            <label for="check">
+                <span class="span" id="times"><img style="height: 30px;width: 30px;" src="img/close.png" alt=""></span>
+                <span class="span" id="bars"><img style="height: 30px;width: 30px;" src="img/icons8-menu-32.png" alt=""></span>
+            </label>
+            <div class="head">menu</div>
+            <ol>
+                <li><a value="giveattendance">Give Attendance</a></li>
+                <li><a value="calculateattendance"></i>Attendance Calculation</a></li>
+                <li><a value="studentinfo"></i>Student Info Creation</a></li>
+                <li><a value="coursecreate"></i>Subject Creation</a></li>
+
+            </ol>
+        </div>
+    </div>
+    <!--dfghjkl;kjhgfdghjkl;kjhg-->
+    <header>
+        <div class="logoutcontainer">
+            <input type="checkbox" id="lcheck">
+            <label for="lcheck" id="username">
+            </label>
+            <label id="ullogout" onclick="logout()">logout</label>
+        </div>
+
+    </header>
+    <main>
+        <div class="formcontainer formgiveatt showform">
+            <form name="formgiveatt" action="giveattendance.php" method="post">
+                <h3>Give Attendance</h3>
+                <div class="input-group">
+                    <label for="dept">Department</label>
+                    <select name="dept" id="dept1" required>
+                        <option label="select department" value=""></option>
+                        <option value="B.C.A">B.C.A</option>
+                        <option value="B.A English">B.A English</option>
+                        <option value="B.S.C Computer Science">B.S.C Computer Science</option>
+                        <option value="B.S.C Math">B.S.C Math</option>
+                        <option value="B.S.C Math(Aided)">B.S.C Math(Aided)</option>
+                    </select>
+
+                </div>
+                <div class="input-group">
+                    <label for="year">Year</label>
+                    <select name="year" id="year" required>
+                        <option label="select-year" value=""></option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </select>
+
+                </div>
+                <div class="input-group batchcontainer1">
+                    <label for="batch">Batch
+                    </label>
+                    <select name="batch" id="batch">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                    </select>
+
+                </div>
+                <div class="input-group">
+                    <label for="cname">Subject Name</label>
+                    <select name="cname" id="cname" required>
+                        <option label="select-coursename" value=""></option>
+                        <option>rdbms</option>
+                        <option>Machine Learning</option>
+                        <option>Web Technology</option>
+                        <option>E-commerce</option>
+                        <option>Personality Development</option>
+                    </select>
+
+                </div>
+                <div class="input-group">
+                    <label for="date">Date</label>
+                    <input type="date" name="date" id="date" required>
+                    <span id="dateerror" class="error"></span>
+                </div>
+                <div class="input-group">
+                    <table>
+                        <tr>
+                            <td rowspan='2'>classname</td>
+                            <td colspan='7'>hours</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="button-container">
+                                    <input type="radio" id="radio1" name="hour" value="1" required>
+                                    <label class="button-label" for="radio1">1'st hour</label>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="button-container">
+                                    <input type="radio" id="radio2" name="hour" value="2">
+                                    <label class="button-label" for="radio2">2'nd hour</label>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="button-container">
+                                    <input type="radio" id="radio3" name="hour" value="3">
+                                    <label class="button-label" for="radio3">3'rd hour</label>
+                                </div>
+                            </td>
+                            <td>lunch break</td>
+                            <td>
+                                <div class="button-container">
+                                    <input type="radio" id="radio4" name="hour" value="4">
+                                    <label class="button-label" for="radio4">4'th hour</label>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="button-container">
+                                    <input type="radio" id="radio5" name="hour" value="5">
+                                    <label class="button-label" for="radio5">5'th hour</label>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+
+                    <span id="hourerror" class="error"></span>
+                </div>
+                <button name="giveattendance" value="giveattendance" id="giveattendancebut">GiveAttendance</button>
+
+            </form>
+        </div>
+
+        <div class="formcontainer formcalculateatt">
+            <form name="formcalculateatt" action="calculateattendance.html" method="get">
+                <h3>Calculate Attendance</h3>
+                <div class="input-group">
+                    <label for="dept">Department</label>
+                    <select name="dept" id="dept2" required>
+                        <option value="">select department</option>
+                        <option value="B.C.A">B.C.A</option>
+                        <option value="B.A English">B.A English</option>
+                        <option value="B.S.C Computer Science">B.S.C Computer Science</option>
+                        <option value="B.S.C Math">B.S.C Math</option>
+                        <option value="B.S.C Math(Aided)">B.S.C Math(Aided)</option>
+                    </select>
+
+                </div>
+                <div class="input-group">
+                    <label for="year">Year</label>
+                    <select name="year" id="year" required>
+                        <option value="">select-year</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </select>
+
+                </div>
+                <div class="input-group batchcontainer2">
+                    <label for="batch">Batch
+                    </label>
+                    <select name="batch" id="batch" required>
+
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                    </select>
+
+                </div>
+                <button name="calculateattendance" value="calculateattendance" id="calculateattendance">Calculate
+                    Attendance</button>
+
+            </form>
+        </div>
+        <div class="formcontainer formcreatecourse">
+            <form name="formcreatecourse" action="../error.php">
+                <h3>Create Subject </h3>
+                <div class="input-group">
+                    <label for="dept">Department</label>
+                    <select name="dept" id="dept">
+                        <option value="B.C.A">B.C.A</option>
+                        <option value="B.A English">B.A English</option>
+                        <option value="B.S.C Computer Science">B.S.C Computer Science</option>
+                        <option value="B.S.C Math">B.S.C Math</option>
+                        <option value="B.S.C Math(Aided)">B.S.C Math(Aided)</option>
+                    </select>
+
+                </div>
+                <div class="input-group">
+                    <label for="year">Year</label>
+                    <select name="year" id="year">
+                        <option value=" ">select-year</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </select>
+
+                </div>
+                <div class="input-group">
+                    <label for="text">Subject Name</label>
+                    </label>
+                    <input type="text" id="course" name="course" placeholder="machine learning">
+                </div>
+                <div id="msgboxcoursecreate"></div>
+                <button name="button" value="createcourse" id="createcourse">Create Subject</button>
+
+            </form>
+        </div>
+        <div class="formcontainer formcreatestudent">
+            <form name="formcreatestudent">
+                <h3>Create Student Info</h3>
+                <div class="input-group">
+                    <label for="dept">Department</label>
+                    <select name="dept" id="dept3">
+                        <option value=" ">select department</option>
+                        <option value="B.C.A">B.C.A</option>
+                        <option value="B.A English">B.A English</option>
+                        <option value="B.S.C Computer Science">B.S.C Computer Science</option>
+                        <option value="B.S.C Math">B.S.C Math</option>
+                        <option value="B.S.C Math(Aided)">B.S.C Math(Aided)</option>
+                    </select>
+
+                </div>
+                <div class="input-group">
+                    <label for="year">Year</label>
+                    <select name="year" id="year">
+                        <option value=" ">select-year</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </select>
+
+                </div>
+                <div class="input-group batchcontainer3">
+                    <label for="batch" class="hidebatch">Batch
+                    </label>
+                    <select name="batch" id="batch">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                    </select>
+
+                </div>
+                <div class="input-group">
+                    <label for="sname">Student Name</label>
+                    </label>
+                    <input type="text" id="sname" name="sname" placeholder="student name">
+                </div>
+                <div class="input-group">
+                    <label for="regno">Register No</label>
+                    </label>
+                    <input type="number" id="regno" name="regno" placeholder="20211231401324">
+                </div>
+                <div id="msgboxstudencreate"></div>
+                <button name="button" value="createinfo" id="createinfo">Create Info</button>
+
+            </form>
+        </div>
+
+    </main>
+</body>
+
+</html>

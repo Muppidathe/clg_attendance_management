@@ -1,0 +1,123 @@
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th,
+td {
+  border: 1px solid black;
+  padding: 8px;
+  text-align: center;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+
+
+.button-container {
+  margin-bottom: 20px;
+}
+
+.button-label {
+  display: inline-block;
+  background-color: #ccc;
+  padding: 10px 20px;
+  border: 1px solid #999;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+input[type="radio"]:checked+.button-label {
+  background-color: #69d6f1;
+  border-color: #69d6f1;
+  color: #fff;
+}
+
+/*other code*/
+.formcontainer {
+  display: none;
+  width: 60vw;
+  margin: auto;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 5px 20px 50px #000;
+  padding: .5% 1%;
+}
+
+.formcontainer h3 {
+  margin-top: 10px;
+  text-align: center;
+  color: #80D0C7;
+
+}
+
+.input-group select,
+.input-group input {
+  margin: 10px 0 0 0;
+  padding: 10px;
+  border: 1px solid #80D0C7;
+  min-width: 30%;
+}
+
+input:focus {
+  border: 1px solid #80D0C7;
+}
+
+button {
+  margin: 4% 2%;
+  background-color: #80D0C7;
+  color: white;
+  border: 1px solid #80D0C7;
+  border-radius: 5px;
+  width: 96%;
+  display: block;
+  text-align: center;
+  font-size: 30px;
+  font-style: bold;
+  cursor: pointer;
+}
+
+.input-group label {
+  display: block;
+  margin-top: 10px;
+}
+
+.error {
+  color: red;
+  font-style: bold;
+  font-size: .8rem;
+  display: block;
+  margin: 0 10px 10px 10px;
+}
+
+table {
+  background-color: rgb(199, 240, 240);
+  border: 2px solid #69d6f1;
+  border-collapse: collapse;
+}
+
+.showform {
+  display: block;
+}
+
+.batchcontainer1,
+.batchcontainer2,
+.batchcontainer3 {
+  display: none;
+}
+
+.showbatch {
+  display: block !important;
+}
+
+#msgboxcoursecreate,
+#msgboxstudencreate {
+  margin-top: 10px;
+  text-align: center;
+}

@@ -1,0 +1,12 @@
+<?php
+session_start();
+if(isset($_SESSION['designation'])){
+unset($_SESSION['id']);
+unset($_SESSION['name']);
+unset($_SESSION['username']);
+unset($_SESSION['designation']);
+}
+if(isset($_SESSION['regno'])){unset($_SESSION['regno']);}
+header("location:login.html");
+die();
+?>

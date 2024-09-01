@@ -1,0 +1,199 @@
+body {
+    min-height: 100vh;
+    background-color: white;
+    font-family: "Roboto", helvetica, arial, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    text-rendering: optimizeLegibility;
+    max-width: 100%;
+    margin: 0;
+
+
+}
+
+
+
+/*** Table Styles **/
+.tablecontainer {
+    min-height: 80vh;
+    background-color:white;
+    width: 100%;
+    padding: 10px 0;
+    margin: 0;
+
+}
+
+.table-fill {
+    margin: auto;
+    background: white;
+    border-radius: 3px;
+    border-collapse: collapse;
+    padding: 5px;
+    width: 90%;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    animation: float 5s infinite;
+}
+
+.table-fill th {
+    color: #D5DDE5;
+    background: #1b1e24;
+    border-bottom: 4px solid #9ea7af;
+    border-right: 1px solid #343a45;
+    font-size: 23px;
+    font-weight: 100;
+    padding: 24px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.table-fill th:first-child {
+    border-top-left-radius: 3px;
+
+}
+
+.table-fill th:last-child {
+    border-top-right-radius: 3px;
+    border-right: none;
+}
+
+.table-fill tr {
+    border-top: 1px solid #C1C3D1;
+    border-bottom: 1px solid #C1C3D1;
+    color: #666B85;
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.table-fill tr:hover td {
+    background: #4E5066;
+    color: #FFFFFF;
+    border-top: 1px solid #22262e;
+    border-bottom: 1px solid #22262e;
+}
+
+.table-fill tr:first-child {
+    border-top: none;
+}
+
+.table-fill tr:last-child {
+    border-bottom: none;
+}
+
+.table-fill tr:nth-child(odd) td {
+    background: #bab9b9;
+}
+
+.table-fill tr:nth-child(odd):hover td {
+    background: #4E5066;
+}
+
+.table-fill tr:last-child td:first-child {
+    border-bottom-left-radius: 3px;
+}
+
+.table-fill tr:last-child td:last-child {
+    border-bottom-right-radius: 3px;
+}
+
+.table-fill td {
+    position: relative;
+    background: #FFFFFF;
+    padding: 20px;
+    text-align: center;
+    vertical-align: middle;
+    font-weight: 300;
+    font-size: 18px;
+    border-right: 1px solid #C1C3D1;
+}
+
+.table-fill td:last-child {
+    border-right: 0px;
+}
+
+
+.table-fill td .tooltiptext {
+    visibility: hidden;
+    min-width: 120px;
+    background-color: rgb(236, 236, 188);
+    color: black;
+    text-align: center;
+    border-radius: 6px;
+    padding: 1px 1px;
+    position: absolute;
+    z-index: 1;
+    bottom: 150%;
+    left: 50%;
+    margin-left: -60px;
+}
+
+.table-fill td .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: rgb(236, 236, 188) transparent transparent transparent;
+}
+
+.table-fill td:hover .tooltiptext {
+    visibility: visible;
+}
+
+.innerdiv1 {
+    padding: 3px;
+    border-bottom: 2px solid rgb(236, 236, 188);
+    background-color: white;
+    border-radius: 6px;
+}
+
+.innerdiv2 {
+    border-radius: 6px;
+    padding: 3px;
+    background-color: white;
+
+}
+
+.header {
+    width: 100%;
+    min-height: 10vh;
+    background-color: white;
+    position: relative;
+}
+
+/* logout button design*/
+input[type='checkbox'] {
+    display: none;
+}
+
+.logoutname {
+    position: absolute;
+    left: 10vw;
+    top: 4vh;
+}
+
+/*report*/
+.report {
+    background-color:rgb(213, 213, 213);
+    min-height: 10vh;
+    position: relative;
+}
+
+.report1 {
+    position: absolute;
+    top: 4vh;
+    left: 10vw;
+}
+
+.report2 {
+    position: absolute;
+    top: 4vh;
+    left: 45vw;
+}
+
+.report3 {
+    position: absolute;
+    top: 4vh;
+    left: 80vw;
+}

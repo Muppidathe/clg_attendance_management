@@ -1,0 +1,190 @@
+* {
+    margin: 0;
+
+    box-sizing: border-box;
+    font-family: sans-serif;
+    padding: 0;
+}
+
+body {
+
+    background: #ffff;
+    min-height: 90vh;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.container {
+
+    height: 100%;
+    width: 250px;
+    position: absolute;
+    top: 0;
+    background: #f8f5f5;
+    z-index: 1;
+    transition: 0.5s ease;
+    transform: translateX(-250px);
+}
+
+.head {
+    color: #10110e;
+    font-size: 30px;
+    font-weight: bold;
+    padding: 30px;
+    text-transform: uppercase;
+    text-align: justify;
+    letter-spacing: 3px;
+    background: linear-gradient (30deg, #df0155, #ed4901)
+}
+
+
+
+ol {
+    list-style: none;
+}
+
+ol li {
+    display: block;
+    width: 100%;
+    padding-left: 10px;
+    text-align: left;
+    cursor: pointer;
+}
+
+ol li a {
+    color: #10110d;
+    padding: 15px 10px;
+    text-decoration: none;
+    display: block;
+    font-size: 25px;
+    letter-spacing: 1px;
+    position: relative;
+    transition: 0.3s;
+    overflow: hidden;
+    text-transform: capitalize;
+}
+
+
+
+ol li:hover a {
+    background: #030303;
+    color: #00eaff;
+    letter-spacing: 5px;
+    border-radius: 5px;
+}
+
+input[type='checkbox'] {
+    visibility: hidden;
+}
+
+.span {
+    position: absolute;
+    right: -40px;
+    top: 30px;
+    font-size: 25px;
+    border-radius: 3px;
+    color: #0c0a0a;
+    padding: 3px 8px;
+    cursor: pointer;
+}
+
+#check:checked~.container {
+    transform: translateX(0);
+}
+
+#check:checked~.container #bars {
+    display: none;
+}
+
+#check:not(:checked)~.container #times {
+    display: none;
+}
+
+#bars {
+    right: -70px;
+    top: 4vh;
+   }
+
+#times {
+    right: -60px;
+    top: 4vh;
+
+
+}
+
+/* vvvvvvvvvvvvvv*/
+header {
+    min-height: 13vh;
+    width: 100vw;
+    background-color: rgb(209, 208, 207);
+    position: relative;
+    top: -20px;
+    padding: 0;
+
+}
+
+main {
+    position: relative;
+    top: -20px;
+    min-height: 87vh;
+    width: 100vw;
+    background-repeat: no-repeat;
+    background-color:white;
+    display: flex;
+    align-items: center;
+    padding: 50px 0;
+
+}
+
+/* logout button design*/
+
+input[type='checkbox'] {
+    display: none;
+}
+
+.logoutcontainer {
+    position: absolute;
+    left: 90vw;
+    top: 6vh;
+}
+img{
+    display: inline;
+    float: left;
+}
+
+#username{
+    padding-top: 10px;
+    cursor: pointer;
+}
+#username img{
+    position: relative;
+    top: -5px;
+    cursor: pointer;
+}
+#ullogout {
+    position: absolute;
+    display: none;
+    cursor: pointer;
+    top: 6vh;
+}
+
+
+
+#lcheck:checked~#ullogout {
+    display: block;
+    top: 7vh;
+    margin-left: 25%;
+    z-index: 1;
+    background-color: rgb(198, 236, 244);
+    padding: 10px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+
+}
+
+
+#lcheck:not(:checked)~#ullogout {
+    display: none;
+}
+
+/*display none*/

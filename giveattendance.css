@@ -1,0 +1,224 @@
+/*** Table Styles **/
+.table-fill {
+    margin: auto;
+    background: white;
+    border-radius: 3px;
+    border-collapse: collapse;
+    padding: 5px;
+    width: 50%;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    animation: float 5s infinite;
+}
+
+.table-fill th {
+    color: #D5DDE5;
+    background: #979798;
+    border-bottom: 4px solid #9ea7af;
+    border-right: 1px solid #343a45;
+    font-size: 23px;
+    font-weight: 100;
+    padding: 24px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.table-fill th:first-child {
+    border-top-left-radius: 3px;
+
+}
+
+.table-fill th:last-child {
+    border-top-right-radius: 3px;
+    border-right: none;
+}
+
+.table-fill tr {
+    border-top: 1px solid #C1C3D1;
+    border-bottom: 1px solid #C1C3D1;
+    color: #666B85;
+    font-size: 16px;
+    font-weight: normal;
+}
+
+
+.table-fill tr:first-child {
+    border-top: none;
+}
+
+.table-fill tr:last-child {
+    border-bottom: none;
+}
+
+.table-fill tr:last-child td:first-child {
+    border-bottom-left-radius: 3px;
+}
+
+.table-fill tr:last-child td:last-child {
+    border-bottom-right-radius: 3px;
+}
+
+.table-fill td {
+    position: relative;
+    background: #FFFFFF;
+    padding: 20px;
+    text-align: center;
+    vertical-align: middle;
+    font-weight: 300;
+    font-size: 18px;
+    border-right: 1px solid #C1C3D1;
+}
+
+.table-fill td:last-child {
+    border-right: 0px;
+}
+
+body {
+    min-height: 100vh;
+    background-color: white;
+    font-family: "Roboto", helvetica, arial, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    text-rendering: optimizeLegibility;
+    max-width: 100%;
+    margin: 0;
+}
+
+.bodycontainer {
+    min-height: 90vh;
+    background-color: white;
+    width: 100%;
+    padding: 10px 0;
+    margin: 0;
+
+
+}
+
+.header {
+    width: 100%;
+    min-height: 10vh;
+    background-color: rgb(229, 227, 227);
+    position: relative;
+}
+
+.classname {
+    position: absolute;
+    top: 7vh;
+    left: 10vw;
+}
+
+.giveatt {
+    position: absolute;
+    top: 5vh;
+    left: 45vw;
+    font-size: large;
+    font-weight: 400;
+}
+
+.date {
+    position: absolute;
+    top: 7vh;
+    left: 85vw;
+}
+
+.coursename {
+    position: absolute;
+    top: 2vh;
+    left: 85vw;
+}
+
+input[type='checkbox'] {
+    display: none;
+}
+
+.labelchkbox {
+    position: relative;
+    display: block;
+    padding: 10px;
+    border: 1px solid red;
+    background-color: red;
+    border-radius: 10px;
+    width: 60px;
+    height: 25px;
+    text-align: center;
+    margin: 0 0;
+    left: 30%;
+    cursor: pointer;
+}
+
+input[name='giveattendance'] {
+    background-color: pink;
+    border: 1px solid pink;
+    border-radius: 20px;
+    width: 50%;
+    height: 50px;
+    margin-top: 40px;
+    text-align: center;
+    cursor: pointer;
+    margin-left: 25%;
+}
+
+.confirmation {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 25%;
+    top: 10vh;
+    width: 50%;
+    min-height: 20%;
+    background: wheat;
+}
+
+.confirmation h3 {
+    text-align: center;
+    margin-top: 4px;
+    padding: 5px;
+    font-size: 30px;
+    color: grey;
+}
+
+.popupbutton {
+    width: 100%;
+    height: 40px;
+    background-color: grey;
+    padding: 0;
+}
+
+.popupbutton button[name='cancel'] {
+    width: 50%;
+    height: 100%;
+    color: white;
+    background-color: red;
+    border: 1px solid red;
+    cursor: pointer;
+
+}
+
+.popupbutton button[name='confirm'] {
+    width: 49%;
+    height: 100%;
+    color: white;
+    background-color: grey;
+    border: 1px solid grey;
+    cursor: pointer;
+}
+
+
+
+#absent {
+    list-style: none;
+
+}
+
+#absentlist {
+    display: block;
+    color: red;
+    font-size: 20px;
+    padding: 10px;
+}
+
+#absent li {
+    display: block;
+    color: red;
+    font-size: 1rem;
+    line-height: 20px;
+}

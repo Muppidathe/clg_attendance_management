@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>studentdashboard</title>
+
+    <link rel="stylesheet" href="studentdashboard.css">
+    <script src="studentdashboard.js" defer></script>
+</head>
+
+<body>
+    <div class="header">
+        <div class="logoutname"><input type="checkbox" id="lcheck">
+            <label for="lcheck" id="username">zzz
+
+            </label>
+            
+                <label id="ullogout" onclick="logout()">logout</label>
+        
+        </div>
+    </div>
+    <div class="report">
+        <span class="report1">total: <span id="totaldays"></span> days</span>
+        <span class="report2">presented: <span id="presenteddays"></span>days</span>
+        <span class="report3">total:<span id="percentage"></span>%</span>
+    </div>
+    <div class="tablecontainer">
+        <table class="table-fill">
+            <thead>
+                <tr>
+                    <th>date</th>
+                    <th>1'st hour</th>
+                    <th>2'nd hour</th>
+                    <th>3'rd hour</th>
+                    <th>4'th hour</th>
+                    <th>5'th hour</th>
+                </tr>
+            </thead>
+            <tbody class="table-hover">
+                
+            </tbody>
+        </table>
+
+    </div>
+
+
+</body>
